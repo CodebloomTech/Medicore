@@ -41,7 +41,7 @@
 ## 🤖 Medicore API
 > Modern healthcare. Managed Seamlessly.
   
-  -⚙️**Fast API**
+  -⚙️**Fast API**<br>
   -✅**Intergrated for Medicore**
   
 ---
