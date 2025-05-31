@@ -1,7 +1,11 @@
+<p align="center">
+  <img src="![image1](image1)" alt="Codebloom Medicore Logo" width="700"/>
+</p>
+
 <!-- Animated Medicore Healthcare Management System README -->
 
 <p align="center">
- <a href="https://ibb.co/BxsMwZq"><img src="https://i.ibb.co/8p8ZX56/Medicore-by-Codebloom-Photoroom.jpg" alt="Medicore-by-Codebloom-Photoroom" border="0"></a>
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjVhczI0djh3ZG5vZ3R4eG9zY3N4cW50enBrMHZyOTdscjZndGQ0OSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/H83wLkW7Ck2o1l6N6g/giphy.gif" width="120" alt="Medicore Logo Animation"/>
 </p>
 
 <h1 align="center">
