@@ -1,10 +1,9 @@
-// routes/billRoutes.js
 const express = require("express");
 const router = express.Router();
 const billController = require("../controllers/billController");
-const { authenticateToken } = require("../middleware/authMiddleware"); // ✅ Destructure the function
+const { authenticateToken } = require("../middleware/authMiddleware"); // Correct import
 
-router.use(authenticateToken); // ✅ Apply to all routes in this router
+router.use(authenticateToken); // Apply middleware to all routes
 
 router.post("/", billController.createBill);
 router.get("/", billController.getBills);

@@ -19,6 +19,19 @@ exports.getAllRequests = async (req, res) => {
   }
 };
 
+exports.getRequestById = async (req, res) => {
+  try {
+    const request = await PharmacyRequest.findById(req.params.id).populate("requestedBy medicines.medicine");
+    if (!request) {
+      return res.status(404).json({ message: "Request not found" });
+    }
+    res.status(200).json(request);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
 exports.updateRequestStatus = async (req, res) => {
   try {
     const updated = await PharmacyRequest.findByIdAndUpdate(req.params.id, req.body, { new: true });
