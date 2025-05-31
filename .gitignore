@@ -1,0 +1,39 @@
+# === Node.js backend ===
+server/node_modules/
+server/.env
+server/.DS_Store
+server/package-lock.json
+
+# === React frontend ===
+client/node_modules/
+client/.env
+client/.DS_Store
+client/build/
+client/package-lock.json
+
+# === General ===
+*.log
+.env
+.DS_Store
+*.local
+*.cache
+*.gz
+coverage/
+dist/
+.vscode/
+.idea/
+Thumbs.db
+
+# === Mobile (if you're using React Native or Flutter) ===
+mobile/node_modules/
+mobile/android/
+mobile/ios/
+mobile/.env
+mobile/build/
+mobile/.expo/
+
+# === VS Code settings ===
+.vscode/
+
+# === Git ===
+.git
