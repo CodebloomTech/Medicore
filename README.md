@@ -36,6 +36,16 @@
 
 ---
 
+<p align="center"><img src="https://github.com/github-copilot/chat/attachments/1180834" alt="Medicore API"</p>
+  
+## 🤖 Medicore API
+> Modern healthcare. Managed Seamlessly.
+  
+  -⚙️**Fast API**
+  -✅**Intergrated for Medicore**
+  
+---
+  
 ## 🇹🇿 Built for Tanzania
 
 > "Medicore is designed **by Tanzanians, for Tanzanians**. Seamlessly connect with NHIF and meet local healthcare needs with confidence."
