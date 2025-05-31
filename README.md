@@ -38,10 +38,11 @@
 
 <p align="center"><img src="https://github.com/github-copilot/chat/attachments/1180834" alt="Medicore API"</p>
   
-## 🤖 Medicore API
-> Modern healthcare. Managed Seamlessly.
-  
-  -⚙️**Fast API**<br>
+**<center><h2 align="center"><b>🤖 Medicore API</b></h2>**
+<p align="center">Modern healthcare. Managed Seamlessly.</p>
+</center>
+
+  -⚙️**Fast API<br>**
   -✅**Intergrated for Medicore**
   
 ---
