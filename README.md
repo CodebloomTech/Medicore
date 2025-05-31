@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="![image1](image1)" alt="Codebloom Medicore Logo" width="700"/>
+  <img src="![[[image1](https://copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/188546544/8380d6fc-9a4d-40fe-87a7-1d8b8cadf4aa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-05-31T15%3A09%3A53Z&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-05-31T14%3A43%3A45Z&ske=2025-05-31T15%3A44%3A44Z&sks=b&skv=2018-11-09&sig=ZImXESKt1MidRbII2vpdzAXtSoFqGGacy0mCd2l%2B4kA%3D)](https://copilotprodattachments.blob.core.windows.net/github-production-copilot-attachments/188546544/8380d6fc-9a4d-40fe-87a7-1d8b8cadf4aa?sp=r&sv=2018-11-09&sr=b&spr=https&se=2025-05-31T15%3A09%3A53Z&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2025-05-31T14%3A43%3A45Z&ske=2025-05-31T15%3A44%3A44Z&sks=b&skv=2018-11-09&sig=ZImXESKt1MidRbII2vpdzAXtSoFqGGacy0mCd2l%2B4kA%3D)](image1)" alt="Codebloom Medicore Logo" width="700"/>
 </p>
 
 <!-- Animated Medicore Healthcare Management System README -->
