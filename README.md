@@ -35,7 +35,6 @@
 - 📊 **Analytics & Reports:** Make data-driven decisions.
 
 ---
-
 <p align="center"><img src="https://github.com/github-copilot/chat/attachments/1180834" alt="Medicore API"</p>
   
 **<center><h2 align="center"><b>🤖 Medicore API</b></h2>**
@@ -44,7 +43,6 @@
 
   -⚙️**Fast API<br>**
   -✅**Intergrated for Medicore**
-  
 ---
   
 ## 🇹🇿 Built for Tanzania
