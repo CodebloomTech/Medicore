@@ -10,7 +10,7 @@ const {
   deleteSchedule,
 } = require("../controllers/scheduleController");
 
-const { authenticateToken } = require("../middleware/authMiddleware");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 
 // POST: Create a new schedule (Protected)
 router.post("/", authenticateToken, createSchedule);

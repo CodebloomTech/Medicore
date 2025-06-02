@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Receptionist = require("../models/Receptionist");
-const { authenticateToken } = require("../middleware/authMiddleware");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 
 // Helper: Auto-generate Receptionist ID
 const generateReceptionistId = async () => {

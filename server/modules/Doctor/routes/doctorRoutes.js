@@ -1,8 +1,8 @@
 // routes/patientRoutes.js
 const express = require("express");
 const router = express.Router();
-const Patient = require("../modules/Patient/models/Patient");
-const { authenticateToken } = require("../middleware/authMiddleware");
+const Patient = require("../../Patient/models/Patient");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 
 // Helper: Generate a unique patient ID like PAT/001/25
 const getNextPatientId = async () => {

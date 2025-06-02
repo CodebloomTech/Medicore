@@ -7,9 +7,9 @@ const {
   getDepartmentById,
   updateDepartment,
   deleteDepartment,
-} = require("../controllers/departmentController");
+} = require("../../../controllers/departmentController");
 
-const { authenticateToken } = require("../middleware/authMiddleware");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 
 // POST: Create new department (Protected)
 router.post("/", authenticateToken, createDepartment);
