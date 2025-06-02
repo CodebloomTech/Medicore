@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const pharmacyRequestController = require("../controllers/pharmacyRequestController");
-const { authenticateToken } = require("../middleware/authMiddleware");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 
 router.post("/", authenticateToken, pharmacyRequestController.createRequest);
 router.get("/", authenticateToken, pharmacyRequestController.getAllRequests);

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const stockAdjustmentController = require("../controllers/stockAdjustmentController");
-const { authenticateToken } = require("../middleware/authMiddleware");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 
 router.post("/", authenticateToken, stockAdjustmentController.createStockAdjustment);
 router.get("/", authenticateToken, stockAdjustmentController.getAllStockAdjustments);

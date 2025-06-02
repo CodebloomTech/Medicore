@@ -3,11 +3,14 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const chalk = require("chalk");
 
+// Load environment variables
 dotenv.config();
+
+// Initialize express app
 const app = express();
 app.use(express.json());
 
-// Custom modules
+// Custom logger utilities
 const connectDB = require("./config/db");
 const {
   logBanner,
@@ -19,85 +22,69 @@ const {
   logTime,
 } = require("./utils/logger");
 
-// Route imports
-const patientRoutes = require("./routes/patientRoutes");
+// Route Imports 🛣️
+const patientRoutes = require("./modules/Patient/routes/patientRoutes");
 const doctorRoutes = require("./routes/doctorRoutes");
 const departmentRoutes = require("./routes/departmentRoutes");
 const scheduleRoutes = require("./routes/scheduleRoutes");
 const billRoutes = require("./routes/billRoutes");
-app.use("/api/bills", billRoutes); // 👈 should be like this
+const medicineRoutes = require("./modules/Pharmacy/routes/medicineRoutes");
+const pharmacyTransactionRoutes = require("./modules/Pharmacy/routes/pharmacyTransactionRoutes");
+const stockAdjustmentRoutes = require("./modules/Pharmacy/routes/stockAdjustmentRoutes");
+const pharmacyRequestRoutes = require("./modules/Pharmacy/routes/pharmacyRequestRoutes");
+const labTestRoutes = require("./routes/labTestRoutes");
+const receptionistRoutes = require("./routes/receptionistRoutes");
 
-
-const medicineRoutes = require("./routes/medicineRoutes");
-const pharmacyTransactionRoutes = require("./routes/pharmacyTransactionRoutes");
-const stockAdjustmentRoutes = require("./routes/stockAdjustmentRoutes");
-const pharmacyRequestRoutes = require("./routes/pharmacyRequestRoutes");
-
-// Show ASCII art banner
+// 💡 Welcome Banner
 logBanner();
-console.log(chalk.cyan("Welcome to Medicore 💉"));
+console.log(chalk.cyan.bold("🌟 Welcome to Medicore Hospital Management System 💉\n"));
 
-// App start timestamp
+// Track boot time
 const startTime = Date.now();
 
+// Async server startup
 (async () => {
   try {
-    startSpinner("🚀 Starting Medicore server...");
+    startSpinner("🚀 Booting Medicore server...");
 
+    // Connect to DB
     await connectDB();
     stopSpinnerSuccess("🛢️ MongoDB connected");
 
-    // Load patient routes
-    startSpinner("Loading patient routes...");
-    app.use("/api/patients", patientRoutes);
-    stopSpinnerSuccess("🩺 Patient routes loaded");
+    // Load Routes 🧩
+    const loadRoute = (desc, path, route) => {
+      startSpinner(`Loading ${desc}...`);
+      app.use(path, route);
+      stopSpinnerSuccess(`${desc} loaded`);
+    };
 
-    // Load doctor routes
-    startSpinner("Loading doctor routes...");
-    app.use("/api/doctors", doctorRoutes);
-    stopSpinnerSuccess("👨‍⚕️ Doctor routes loaded");
+    loadRoute("🩺 Patient routes", "/api/patients", patientRoutes);
+    loadRoute("👨‍⚕️ Doctor routes", "/api/doctors", doctorRoutes);
+    loadRoute("🏥 Department routes", "/api/departments", departmentRoutes);
+    loadRoute("📅 Schedule routes", "/api/schedules", scheduleRoutes);
+    loadRoute("💵 Billing routes", "/api/billing", billRoutes);
 
-    // Load department routes
-    startSpinner("Loading department routes...");
-    app.use("/api/departments", departmentRoutes);
-    stopSpinnerSuccess("🏥 Department routes loaded");
+    // Pharmacy sub-modules
+    loadRoute("💊 Medicine routes", "/api/pharmacy/medicine", medicineRoutes);
+    loadRoute("📦 Pharmacy transaction routes", "/api/pharmacy/transactions", pharmacyTransactionRoutes);
+    loadRoute("📉 Stock adjustment routes", "/api/pharmacy/stock-adjustments", stockAdjustmentRoutes);
+    loadRoute("📬 Pharmacy request routes", "/api/pharmacy/requests", pharmacyRequestRoutes);
 
-    // Load schedule routes
-    startSpinner("Loading schedule routes...");
-    app.use("/api/schedules", scheduleRoutes);
-    stopSpinnerSuccess("📅 Schedule routes loaded");
+    // Laboratory
+    loadRoute("🧪 Lab test routes", "/api/lab-tests", labTestRoutes);
 
-    // Load billing/cashier routes
-    startSpinner("Loading billing routes...");
-    app.use("/api/billing", billRoutes);
-    stopSpinnerSuccess("💵 Billing routes loaded");
+    // Receptionist
+    loadRoute("🧾 Receptionist routes", "/api/receptionists", receptionistRoutes);
 
-    // Load pharmacy routes
-    startSpinner("Loading pharmacy medicine routes...");
-    app.use("/api/pharmacy/medicine", medicineRoutes);
-    stopSpinnerSuccess("💊 Medicine routes loaded");
-
-    startSpinner("Loading pharmacy transaction routes...");
-    app.use("/api/pharmacy/transactions", pharmacyTransactionRoutes);
-    stopSpinnerSuccess("📦 Pharmacy transaction routes loaded");
-
-    startSpinner("Loading stock adjustment routes...");
-    app.use("/api/pharmacy/stock-adjustments", stockAdjustmentRoutes);
-    stopSpinnerSuccess("📉 Stock adjustment routes loaded");
-
-    startSpinner("Loading pharmacy request routes...");
-    app.use("/api/pharmacy/requests", pharmacyRequestRoutes);
-    stopSpinnerSuccess("📬 Pharmacy request routes loaded");
-
-    // Start server
+    // Start the server
     const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => {
-      logInfo(`🚦 Server running on port ${PORT}`);
+      logInfo(`🚦 Server is up and running on port ${PORT}`);
       logTime(startTime);
     });
 
   } catch (err) {
-    stopSpinnerFail("💥 Failed to initialize Medicore server");
+    stopSpinnerFail("💥 Medicore server failed to initialize");
     logError("Startup Error", err.message);
     process.exit(1);
   }

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Patient = require("../models/Patient");
-const { authenticateToken } = require("../middleware/authMiddleware");
+const Patient = require("../modules/Pharmacy/models/Patient");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 // Patient Routes
 // This file handles all patient-related routes, including CRUD operations
 

@@ -10,7 +10,7 @@ exports.createSession = async (req, res) => {
   }
 };
 
-exports.getSessions = async (req, res) => {
+exports.getAllSessions = async (req, res) => {
   try {
     const sessions = await Session.find()
       .populate("patient")

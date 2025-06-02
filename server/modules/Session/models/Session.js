@@ -20,7 +20,9 @@ const sessionSchema = new mongoose.Schema({
     enum: ["Consultation", "Emergency", "Follow-up", "Check-up"],
     required: true,
   },
-  visitReason: String,
+  visitReason: {
+    type: String,
+  },
   triage: {
     temperature: String,
     bloodPressure: String,
@@ -38,6 +40,8 @@ const sessionSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   }
+}, {
+  timestamps: true,
 });
 
 module.exports = mongoose.model("Session", sessionSchema);

@@ -7,7 +7,7 @@ const {
   updateRequisitionStatus,
 } = require("../controllers/requisitionController");
 
-const { authenticateToken } = require("../middleware/authMiddleware");
+const { authenticateToken } = require("../../../middleware/authMiddleware");
 
 router.post("/", authenticateToken, createRequisition);
 router.get("/", authenticateToken, getAllRequisitions);
