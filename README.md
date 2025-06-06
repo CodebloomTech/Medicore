@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="[https://github.com/github-copilot/chat/attachments/1177842](https://ik.imagekit.io/shqdrack/Medicore%20by%20Codebloom-Photoroom.jpg)" alt="Codebloom Medicore Logo" width="700"/>
+  <img src="https://ik.imagekit.io/shqdrack/Medicore%20by%20Codebloom-Photoroom.jpg" alt="Codebloom Medicore Logo" width="700"/>
 </p>
 
 <!-- Animated Medicore Healthcare Management System README -->
@@ -35,7 +35,7 @@
 - 📊 **Analytics & Reports:** Make data-driven decisions.
 
 ---
-<p align="center"><img src="[https://github.com/github-copilot/chat/attachments/1180834](https://ik.imagekit.io/shqdrack/Medicore%20by%20Codebloom-Photoroom(1).jpg)" alt="Medicore API"</p>
+<p align="center"><img src="https://ik.imagekit.io/shqdrack/Medicore%20by%20Codebloom-Photoroom(1).jpg" alt="Medicore API"</p>
   
 **<center><h2 align="center"><b>🤖 Medicore API</b></h2>**
 <p align="center">Modern healthcare. Managed Seamlessly.</p>
